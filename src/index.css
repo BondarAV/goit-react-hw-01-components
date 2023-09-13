@@ -1,5 +1,46 @@
 @import-normalize; /* bring in normalize.css styles */
 
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,4 +53,216 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  width: 430px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 50px 15px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1.5px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  border-bottom: 2px solid #b0b0b0;
+}
+
+.description .avatar {
+  width: 160px;
+  margin-bottom: 40px;
+
+  border-radius: 50%;
+  background-color: brown;
+}
+
+.description .name {
+  margin-bottom: 15px;
+
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.description .tag {
+  margin-bottom: 15px;
+
+  font-size: 20px;
+  color: gray;
+}
+
+.description .location {
+  font-size: 20px;
+  color: gray;
+}
+
+.profile .stats {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+.profile .stats li {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-right: 2px solid #b0b0b0;
+  background-color: #dadaff3b;
+}
+
+.profile .stats li:nth-last-child(1) {
+  border: none;
+}
+
+.profile .stats .label {
+  font-size: 20px;
+  color: gray;
+}
+
+.profile .stats .quantity {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.statistics {
+  box-shadow: 0px 0px 5px 1.5px rgba(0, 0, 0, 0.5);
+  min-height: 200px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statistics .title {
+  width: 100%;
+  height: 100px;
+  font-size: 30px;
+  font-weight: medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 2px solid #b0b0b0;
+}
+
+.statistics .stat-list {
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.statistics .stat-list .item {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistics .stat-list .item:nth-child(5n + 1) {
+  background-color: #6a94ff;
+}
+
+.statistics .stat-list .item:nth-child(5n + 2) {
+  background-color: #c640b6;
+}
+
+.statistics .stat-list .item:nth-child(5n + 3) {
+  background-color: #ff6a7b;
+}
+
+.statistics .stat-list .item:nth-child(5n + 4) {
+  background-color: #6aff8f;
+}
+
+.statistics .stat-list .item:nth-child(5n + 5) {
+  background-color: #ffeb6a;
+}
+
+.friend-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.friend-list .item {
+  box-shadow: 0px 0px 5px 1.5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  height: 100px;
+  padding-left: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.friend-list .online,
+.friend-list .offline {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.friend-list .online {
+  background-color: green;
+}
+
+.friend-list .offline {
+  background-color: red;
+}
+
+.friend-list .name {
+  font-size: 28px;
+}
+
+.transaction-history {
+  box-shadow: 0px 0px 5px 1.5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.transaction-history th {
+  background-color: rgb(94, 216, 223);
+  color: white;
+}
+
+.transaction-history tr {
+  height: 50px;
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(235, 235, 235);
+}
+
+td {
+  text-align: center;
+  color: gray;
 }
